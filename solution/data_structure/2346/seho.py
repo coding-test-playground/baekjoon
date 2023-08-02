@@ -16,7 +16,8 @@ def main():
         result.append(balloon.pop(curr_index)) # 터뜨린 풍선의 번호
         paper_temp = paper.pop(curr_index)
         
-        print(result[-1], " ", end='')
+        #print("current index : ", curr_index)
+        print(str(result[-1])+" ", end='')
 
         if len(balloon) == 1:
             result.append(balloon.pop(0))
@@ -25,6 +26,8 @@ def main():
 
         if paper_temp > 0:
             curr_index = (curr_index + paper_temp) % len(balloon) - 1
+            if curr_index < 0:
+                curr_index = curr_index + len(balloon)
         else:
             if (curr_index + paper_temp) >= 0:
                 curr_index = curr_index + paper_temp
