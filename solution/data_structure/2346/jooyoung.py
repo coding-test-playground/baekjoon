@@ -21,11 +21,22 @@ while True:
         for _ in range(num - 1):
             balloon.append(balloon.pop(0))
             number.append(number.pop(0))
-    else:  # 음수라면
-        balloon.reverse()  # 배열을 거꾸로 정렬해주고
-        num = (-num)  # 풍선안에 있는 숫자만큼 반복문으로 재정렬해준다
+
+    else:  # 음수라면 왼쪽 회전
+        balloon.reverse()
+        number.reverse()
+
+        for i in range(len(number)):
+            number[i] = -number[i]
+
+        num = (-num)
         for _ in range(num - 1):
             balloon.append(balloon.pop(0))
             number.append(number.pop(0))
 
 print(result)
+
+'''
+reverse 한 상태에서 오른쪽으로 회전하는 것 == 왼쪽으로 회전하는 것
+종이 숫자들을 양수는 음수로 음수는 양수로 바꿔주면 된다.
+'''
