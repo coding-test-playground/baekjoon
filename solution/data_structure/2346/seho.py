@@ -13,11 +13,6 @@ def main():
     result = []
 
     while(True):
-        if len(balloon) == 0 :
-            break
-
-
-        #print("curr_index = ", curr_index)
         result.append(balloon.pop(curr_index)) # 터뜨린 풍선의 번호
         paper_temp = paper.pop(curr_index)
         
