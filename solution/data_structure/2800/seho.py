@@ -8,8 +8,6 @@ base_count = 0
 ins = ''
 
 def strip(s, count):
-    #print("before strip : ", s)
-    #print("count : ", count)
     lstack = []
     findcount = 0
     flag = False
@@ -32,8 +30,6 @@ def strip(s, count):
                     continue
 
         ret += s[i]
-            
-    #print("after strip : ", ret)
 
     return ret
 
