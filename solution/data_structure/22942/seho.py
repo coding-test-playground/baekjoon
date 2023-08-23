@@ -22,7 +22,7 @@ def main():
         while(j >= 0): # stack에 있는 원과 겹치는 케이스 모두 체크
             l_check, r_check = s[j]
 
-            #print("새로운 넣을 원 :", l_bound, r_bound)
+            #print("새롭게 스택에 넣을 원 :", l_bound, r_bound)
             #print("스택안의 기존 원 : ", l_check, r_check)
            
             if (l_check <= l_bound) and (l_bound <= r_check) and (r_check <= r_bound) : 
